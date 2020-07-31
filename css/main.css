@@ -160,10 +160,11 @@ header nav ul li a{
 	*/
 	border-top: 1px solid #eee;
 }
-
+/* removed for flexbox design
 .section-one h4 {
 	padding: 10px 0;
 }
+*/
 
 
 
@@ -215,10 +216,43 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
 }
 footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+	.top-section, {
+	flex-flow: column;
+	}
+	.bottom-section {
+		flex-flow: row;
+		justify-content: space-between;
+		align-items: flex-start;
+		
+	}
+	.section-one,
+	.section-two,
+	.section-three {
+		display: flex;
+		justify-content: flex-start;
+		
+		flex-flow: column;
+	}
+	.section-two {
+		padding: 0 30px;
+	}
+	.section-two {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+	}
+	.address {
+		padding: 0 0 0 32px;
+	}
+	.section-three h4 {
+		padding: 0 0 0 32px;
+	}
 }
